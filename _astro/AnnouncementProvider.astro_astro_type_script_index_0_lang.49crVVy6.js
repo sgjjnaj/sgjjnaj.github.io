@@ -1,0 +1,1 @@
+import{a as e}from"./announcement.B30HrDda.js";function t(){e()}document.readyState!==`loading`&&t(),document.addEventListener(`astro:page-load`,t);

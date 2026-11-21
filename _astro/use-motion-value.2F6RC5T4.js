@@ -1,0 +1,1 @@
+import{o as e}from"./rolldown-runtime.C_JxhDyB.js";import{t}from"./react.CGhQkGLM.js";import{a as n,i as r}from"./LazyMotionProvider.DuC1DK7G.js";import{d as i}from"./interpolate.cDjf6vUr.js";var a=e(t(),1);function o(e){let t=n(()=>i(e)),{isStatic:o}=(0,a.useContext)(r);if(o){let[,n]=(0,a.useState)(e);(0,a.useEffect)(()=>t.on(`change`,n),[])}return t}export{o as t};

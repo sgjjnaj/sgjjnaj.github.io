@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "revision": null,
+  "site": "https://sgjjnaj.github.io/",
+  "images": {
+    "/og-home.png": {
+      "src": "/social/cover-b5b69f47ba2f320d9f54.jpg",
+      "width": 1200,
+      "height": 630,
+      "type": "image/jpeg",
+      "bytes": 58090,
+      "sourceBytes": 56698
+    },
+    "/og.png": {
+      "src": "/social/cover-b5b69f47ba2f320d9f54.jpg",
+      "width": 1200,
+      "height": 630,
+      "type": "image/jpeg",
+      "bytes": 58090,
+      "sourceBytes": 56698
+    }
+  },
+  "pages": []
+}

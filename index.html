@@ -1,0 +1,388 @@
+<!DOCTYPE html><html data-astro-transition-scope="astro-yztbsuuz-1" lang="zh-CN" class="vertical-scrollbar"> <head><meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <link rel="icon" type="image/svg+xml" href="/favicon.ico"> <meta name="generator" content="Astro v7.1.3">   <link rel="stylesheet" href="/fonts/ChillRoundFRegular/result.css" media="print" onload="this.setAttribute('media','all')"> <link rel="stylesheet" href="/fonts/ChillRoundFBold/result.css" media="print" onload="this.setAttribute('media','all')">  <!-- SEO 元数据由 astro-seo 管理 --> <title>撒撒的糖盒</title>  <link rel="canonical" href="https://sgjjnaj.github.io/"> <meta name="description" content="撒撒的糖盒，AI 产品经理。记录大模型、Agent 与产品化的实践和判断。"> <meta name="robots" content="index, follow"> <meta property="og:title" content="Sasa's Sugar Box = 撒撒的糖盒 = AI 产品经理 · 大模型与 Agent 落地"> <meta property="og:type" content="website"> <meta property="og:image" content="https://sgjjnaj.github.io/social/cover-b5b69f47ba2f320d9f54.jpg"> <meta property="og:url" content="https://sgjjnaj.github.io/">  <meta property="og:description" content="撒撒的糖盒，AI 产品经理。记录大模型、Agent 与产品化的实践和判断。">    <meta property="og:site_name" content="撒撒的糖盒">    <meta name="twitter:card" content="summary_large_image">  <meta name="twitter:title" content="Sasa's Sugar Box = 撒撒的糖盒 = AI 产品经理 · 大模型与 Agent 落地"> <meta name="twitter:image" content="https://sgjjnaj.github.io/social/cover-b5b69f47ba2f320d9f54.jpg">  <meta name="twitter:description" content="撒撒的糖盒，AI 产品经理。记录大模型、Agent 与产品化的实践和判断。">   <meta name="author" content="撒撒的糖盒">    <meta property="og:image:secure_url" content="https://sgjjnaj.github.io/social/cover-b5b69f47ba2f320d9f54.jpg"> <meta property="og:image:alt" content="黑白的浩瀚星空：四个星系和一个黑洞"> <meta name="twitter:image:alt" content="黑白的浩瀚星空：四个星系和一个黑洞"> <meta property="og:image:type" content="image/jpeg"> <meta property="og:image:width" content="1200"> <meta property="og:image:height" content="630">   <meta name="keywords" content="撒撒的糖盒, AI 产品经理, 大模型, Agent, 产品设计">  <link rel="alternate" type="application/rss+xml" title="撒撒的糖盒" href="https://sgjjnaj.github.io/rss.xml">  <link rel="alternate" hreflang="zh-CN" href="https://sgjjnaj.github.io/"><link rel="alternate" hreflang="en" href="https://sgjjnaj.github.io/en/"> <link rel="alternate" hreflang="x-default" href="https://sgjjnaj.github.io/"><meta name="astro-view-transitions-enabled" content="true"> <meta name="astro-view-transitions-fallback" content="animate"> <script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CJL-L8mK.js"></script> <style>.astro-loading-indicator {
+  pointer-events: none;
+  background-color: #e9536a;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: transform 300ms ease-out, opacity 150ms 150ms ease-in;
+	transform: translate3d(0, 0, 0) scaleX(var(--progress, 0));
+  transform-origin: 0;
+}
+
+[dir="rtl"] .astro-loading-indicator {
+  transform-origin: 100% 0;
+}
+</style> <script>(function(){const className = "astro-loading-indicator";
+const animationDuration = 300;
+const threshold = 200;
+
+(() => {
+  let progress = 0.25
+  let opacity = 0
+  /** @type {number | undefined} */
+  let trickleInterval = undefined
+  /** @type {number | undefined} */
+  let thresholdTimeout = undefined;
+
+  const element = document.createElement("div")
+  element.classList.add(className)
+  element.ariaHidden = "true"
+
+  /** @param {typeof progress} _progress */
+  const setProgress = (_progress) => {
+    progress = _progress
+    element.style.setProperty('--progress', String(progress))
+  }
+
+  /** @param {typeof opacity} _opacity */
+  const setOpacity = (_opacity) => {
+    opacity = _opacity
+    element.style.setProperty('opacity', String(opacity))
+  }
+
+  setOpacity(opacity)
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.prepend(element)
+  })
+
+  document.addEventListener("astro:before-preparation", () => {
+    thresholdTimeout = setTimeout(() => {
+      setOpacity(1)
+      trickleInterval = window.setInterval(() => {
+        setProgress(progress + Math.random() * 0.03)
+      }, animationDuration)
+    }, threshold)
+  })
+
+  document.addEventListener("astro:before-swap", (ev) => {
+    if (!thresholdTimeout) {
+      return
+    }
+    window.clearTimeout(thresholdTimeout)
+
+    ev.newDocument.body.prepend(element)
+    window.clearInterval(trickleInterval)
+    trickleInterval = undefined
+
+    setProgress(1)
+    window.setTimeout(() => {
+      setOpacity(0)
+    }, animationDuration / 2)
+
+    window.setTimeout(() => {
+      setProgress(0.25)
+    }, animationDuration * 2)
+  })
+})()
+})();</script> <script type="module" src="/_astro/Tooltips.astro_astro_type_script_index_0_lang.C5vMEGmV.js"></script><script>
+  // 主题系统 - 立即执行以防止 FOUC（无样式内容闪烁）
+  // 优先级：1. 用户手动选择 > 2. 系统偏好
+  (function() {
+    function getTheme() {
+      // 用户明确选择了主题
+      if (localStorage.theme === 'dark') return 'dark';
+      if (localStorage.theme === 'light') return 'light';
+      // 未设置，默认深色（黑白星空）
+      return 'dark';
+    }
+
+    function applyTheme(theme) {
+      var root = document.documentElement;
+      root.classList.toggle('dark', theme === 'dark');
+      root.dataset.theme = theme; // For astro-mermaid autoTheme
+    }
+
+    // 立即应用主题
+    applyTheme(getTheme());
+
+    // 监听系统主题偏好变化
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+      // 仅当用户未明确选择主题时自动切换
+      if (!('theme' in localStorage)) {
+        applyTheme('dark');
+      }
+    });
+
+    // View Transition 切换页面后重新应用主题（在 DOM 渲染前）
+    document.addEventListener('astro:after-swap', function() {
+      applyTheme(getTheme());
+    });
+  })();
+</script> <script>(function(){const christmasFeatureEnabled = false;
+
+  // 立即执行圣诞状态检查 否则彩灯等会闪烁
+  (function () {
+    // 如果构建时配置关闭，则始终不启用
+    if (!christmasFeatureEnabled) {
+      document.documentElement.classList.remove('christmas');
+      return;
+    }
+    // 否则使用用户偏好
+    var stored = localStorage.getItem('christmas-enabled');
+    var enabled = stored !== 'false'; // 默认启用
+    document.documentElement.classList.toggle('christmas', enabled);
+  })();
+})();</script> <script>(function(){const STORAGE_KEYS = {"fontPreset":"reader-font-preset","fontFamily":"reader-font-family","fontSize":"reader-font-size","lineHeight":"reader-line-height","measure":"reader-measure","justify":"reader-justify","scrollProgress":"site-scroll-progress","bgmWidget":"site-bgm-widget","masterMotion":"site-master-motion","wave":"site-wave"};
+const READER_DEFAULTS = {"fontPreset":"round","fontSize":16,"lineHeight":1.8,"measure":null,"justify":false};
+const READER_FONT_FAMILY_MAX_LENGTH = 128;
+const GENERAL_DEFAULTS = {"scrollProgress":true,"bgmWidget":true,"masterMotion":false,"wave":true};
+const FONT_PRESETS = ["round","system","serif","wenkai"];
+const WENKAI_STYLESHEET_ID = "lxgw-wenkai-webfont";
+const WENKAI_STYLESHEET_HREF = "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css";
+
+  // Apply settings immediately to prevent a flash of default reader styles.
+  // Defaults and keys are injected from src/store/settings-constants.ts (single source of truth).
+  (function () {
+    function readPositiveNumber(key, fallback) {
+      var stored = parseFloat(localStorage.getItem(key));
+      return isFinite(stored) && stored > 0 ? stored : fallback;
+    }
+    function readOptionalPositiveNumber(key) {
+      var stored = parseFloat(localStorage.getItem(key));
+      return isFinite(stored) && stored > 0 ? stored : null;
+    }
+    function readBoolean(key, fallback) {
+      var stored = localStorage.getItem(key);
+      return stored === null ? fallback : stored === 'true';
+    }
+    function quoteFontFamily(family) {
+      var serialized = '"';
+      for (var character of family) {
+        var codePoint = character.codePointAt(0);
+        if (codePoint === 0) {
+          serialized += '\uFFFD';
+        } else if ((codePoint >= 0x01 && codePoint <= 0x1f) || codePoint === 0x7f) {
+          serialized += '\\' + codePoint.toString(16) + ' ';
+        } else if (character === '"' || character === '\\') {
+          serialized += '\\' + character;
+        } else {
+          serialized += character;
+        }
+      }
+      return serialized + '"';
+    }
+    function applySettings() {
+      var root = document.documentElement;
+      var stored = localStorage.getItem(STORAGE_KEYS.fontPreset);
+      var preset = FONT_PRESETS.indexOf(stored) !== -1 ? stored : READER_DEFAULTS.fontPreset;
+      root.setAttribute('data-font-preset', preset);
+      var fontFamily = (localStorage.getItem(STORAGE_KEYS.fontFamily) || '')
+        .trim()
+        .slice(0, READER_FONT_FAMILY_MAX_LENGTH);
+      if (fontFamily) {
+        root.setAttribute('data-reader-font', 'local');
+        root.style.setProperty('--reader-font-family', quoteFontFamily(fontFamily));
+      } else {
+        root.removeAttribute('data-reader-font');
+        root.style.removeProperty('--reader-font-family');
+      }
+      var fontSize = readPositiveNumber(STORAGE_KEYS.fontSize, READER_DEFAULTS.fontSize);
+      root.style.setProperty('--reader-font-size', fontSize + 'px');
+      root.style.setProperty('--reader-line-height', String(readPositiveNumber(STORAGE_KEYS.lineHeight, READER_DEFAULTS.lineHeight)));
+      var measure = readOptionalPositiveNumber(STORAGE_KEYS.measure);
+      if (measure === null) {
+        root.style.removeProperty('--reader-measure');
+      } else {
+        // Convert ch to px so headings and body text share one absolute content width.
+        root.style.setProperty('--reader-measure', measure * 0.5 * fontSize + 'px');
+      }
+      root.classList.toggle('reader-justify', readBoolean(STORAGE_KEYS.justify, READER_DEFAULTS.justify));
+      root.classList.toggle('motion-off', readBoolean(STORAGE_KEYS.masterMotion, GENERAL_DEFAULTS.masterMotion));
+      root.classList.toggle('wave-off', !readBoolean(STORAGE_KEYS.wave, GENERAL_DEFAULTS.wave));
+      // Load WenKai only when the matching preset is selected.
+      if (preset === 'wenkai' && !fontFamily && !document.getElementById(WENKAI_STYLESHEET_ID)) {
+        var link = document.createElement('link');
+        link.id = WENKAI_STYLESHEET_ID;
+        link.rel = 'stylesheet';
+        link.href = WENKAI_STYLESHEET_HREF;
+        document.head.appendChild(link);
+      }
+    }
+
+    // Apply before the first frame.
+    applySettings();
+
+    // Reapply before Astro renders the swapped page.
+    document.addEventListener('astro:after-swap', applySettings);
+  })();
+})();</script> <noscript> <style>
+    /* Long code blocks ship pre-collapsed; without JS the toolbar never hydrates, so force them open. */
+    html .prose .code-block-wrapper.code-collapsed > pre {
+      grid-template-rows: 1fr;
+      border-width: 1px;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+    html .prose .code-block-wrapper.code-collapsed > pre > code {
+      max-height: none;
+      overflow-x: auto;
+      overflow-y: visible;
+      padding-block: 1rem;
+    }
+    html .prose .code-block-wrapper.code-collapsed > .code-block-wrapper-toolbar-mount {
+      display: none;
+    }
+  </style> </noscript><meta name="site-build" content="mwq2oa0x"> <script type="module">var e=e=>e.querySelector(`meta[name="site-build"]`)?.content,t=null;document.addEventListener(`astro:before-swap`,n=>{let r=e(document),i=e(n.newDocument);!r||!i||r===i||(t=n.to.href,n.swap=()=>void 0)}),document.addEventListener(`astro:after-swap`,()=>{t&&(window.location.href===t?window.location.reload():window.location.replace(t))});</script><!-- 子页面可通过 slot="head" 注入额外的 head 内容（如 JSON-LD） --><link rel="stylesheet" href="/_astro/Layout.Bzb47hb0.css"><link rel="stylesheet" href="/_astro/pages.C-3WR1UV.css"><script type="module" src="/_astro/page.DzDuXFh5.js"></script><style>[data-astro-transition-scope="astro-yztbsuuz-1"] { view-transition-name: root; }@layer astro { ::view-transition-old(root) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(root) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(root) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(root) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-yztbsuuz-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-yztbsuuz-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-yztbsuuz-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-yztbsuuz-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-yztbsuuz-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-yztbsuuz-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-yztbsuuz-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-yztbsuuz-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-4we2dhi3-2"] { view-transition-name: side-rail; }@layer astro { ::view-transition-old(side-rail) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(side-rail) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(side-rail) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(side-rail) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4we2dhi3-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4we2dhi3-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4we2dhi3-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4we2dhi3-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-4we2dhi3-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-4we2dhi3-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-4we2dhi3-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-4we2dhi3-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-cykaeyu2-3"] { view-transition-name: site-header; }@layer astro { ::view-transition-old(site-header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(site-header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(site-header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(site-header) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-cykaeyu2-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-cykaeyu2-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-cykaeyu2-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-cykaeyu2-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-cykaeyu2-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-cykaeyu2-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-cykaeyu2-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-cykaeyu2-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-bddlvhab-4"] { view-transition-name: page-home-sider-drawer; }@layer astro { ::view-transition-old(page-home-sider-drawer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(page-home-sider-drawer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(page-home-sider-drawer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(page-home-sider-drawer) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bddlvhab-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bddlvhab-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bddlvhab-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bddlvhab-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bddlvhab-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bddlvhab-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bddlvhab-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bddlvhab-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body>  <div class="flex min-h-screen flex-col text-black dark:text-white"> <div class="side-rail-zone" data-side-rail> <span class="side-rail-glint" aria-hidden="true"></span> <nav data-astro-transition-scope="astro-4we2dhi3-2" class="side-rail" aria-label="站点导航"> <a class="side-rail-me" href="/"> <img src="/img/avatar-sasa.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"> <span> <strong>撒撒的糖盒</strong> <small>AI 产品经理 · 大模型与 Agent 落地</small> </span> </a> <p class="side-rail-bio">撒撒的糖盒，AI 产品经理。记录大模型、Agent 与产品化的实践和判断。</p> <ul class="side-rail-links"> <li> <a class="side-rail-link is-active" href="/" aria-current="page"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:home-heart-fill">   <symbol id="ai:ri:home-heart-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M20 20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3zm-8-3l3.359-3.359a2.25 2.25 0 0 0-3.182-3.182l-.177.177l-.177-.177a2.25 2.25 0 0 0-3.182 3.182z"/></symbol><use href="#ai:ri:home-heart-fill"></use>  </svg> 首页 </a> </li><li> <p class="side-rail-heading"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:quill-pen-ai-fill">   <symbol id="ai:ri:quill-pen-ai-fill" viewBox="0 0 24 24"><path fill="currentColor" d="m4.713 7.128l-.246.566a.506.506 0 0 1-.934 0l-.246-.566a4.36 4.36 0 0 0-2.22-2.25l-.759-.339a.53.53 0 0 1 0-.963l.717-.319A4.37 4.37 0 0 0 3.276.931L3.53.32a.506.506 0 0 1 .942 0l.253.61a4.37 4.37 0 0 0 2.25 2.327l.718.32a.53.53 0 0 1 0 .962l-.76.338a4.36 4.36 0 0 0-2.219 2.251m-1.65 14.485C4.09 15.422 6.312 1.997 21 1.997c-1.496 3-2.5 4.5-3.5 5.5l-1 1l1.5 1c-1 3-4 6.5-8 7q-4.003.5-5.002 5.5H3z"/></symbol><use href="#ai:ri:quill-pen-ai-fill"></use>  </svg> 文章 </p> <ul class="side-rail-links"> <li> <a class="side-rail-link is-child" href="/posts"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:article-fill">   <symbol id="ai:ri:article-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1M7 6v4h4V6zm0 6v2h10v-2zm0 4v2h10v-2zm6-9v2h4V7z"/></symbol><use href="#ai:ri:article-fill"></use>  </svg> 全部文章 </a> </li><li> <a class="side-rail-link is-child" href="/papers"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:book-open-fill">   <symbol id="ai:ri:book-open-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M21 21h-8V6a3 3 0 0 1 3-3h5a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1m-10 0H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a3 3 0 0 1 3 3zm0 0h2v2h-2z"/></symbol><use href="#ai:ri:book-open-fill"></use>  </svg> 论文 </a> </li><li> <a class="side-rail-link is-child" href="/blogs"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:global-line">   <symbol id="ai:ri:global-line" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10m-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.01 8.01 0 0 0 5.648 6.667M10.03 13c.151 2.439.848 4.73 1.97 6.752A15.9 15.9 0 0 0 13.97 13zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.01 8.01 0 0 0 19.938 13M4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333A8.01 8.01 0 0 0 4.062 11m5.969 0h3.938A15.9 15.9 0 0 0 12 4.248A15.9 15.9 0 0 0 10.03 11m4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.01 8.01 0 0 0-5.648-6.667"/></symbol><use href="#ai:ri:global-line"></use>  </svg> 博客 </a> </li> </ul> </li><li> <p class="side-rail-heading"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:sparkling-fill">   <symbol id="ai:ri:sparkling-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M14 4.438A2.437 2.437 0 0 0 16.438 2h1.125A2.437 2.437 0 0 0 20 4.438v1.125A2.437 2.437 0 0 0 17.563 8h-1.125A2.437 2.437 0 0 0 14 5.563zM1 11a6 6 0 0 0 6-6h2a6 6 0 0 0 6 6v2a6 6 0 0 0-6 6H7a6 6 0 0 0-6-6zm16.25 3A3.25 3.25 0 0 1 14 17.25v1.5A3.25 3.25 0 0 1 17.25 22h1.5A3.25 3.25 0 0 1 22 18.75v-1.5A3.25 3.25 0 0 1 18.75 14z"/></symbol><use href="#ai:ri:sparkling-fill"></use>  </svg> 生活 </p> <ul class="side-rail-links"> <li> <a class="side-rail-link is-child" href="/gallery"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:gallery-fill">   <symbol id="ai:ri:gallery-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M17.409 19c-.776-2.399-2.277-3.885-4.266-5.602A10.95 10.95 0 0 1 20 11V3h1.008c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3H6V1h2v4H4v7c5.22 0 9.662 2.462 11.313 7zM18 1v4h-8V3h6V1zm-1.5 9a1.5 1.5 0 1 1 0-3a1.5 1.5 0 0 1 0 3"/></symbol><use href="#ai:ri:gallery-fill"></use>  </svg> 照片墙 </a> </li><li> <a class="side-rail-link is-child" href="/moments"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:chat-smile-3-fill">   <symbol id="ai:ri:chat-smile-3-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10H2l2.929-2.929A9.97 9.97 0 0 1 2 12C2 6.477 6.477 2 12 2m4 11H8a4 4 0 0 0 8 0"/></symbol><use href="#ai:ri:chat-smile-3-fill"></use>  </svg> 生活动态 </a> </li> </ul> </li><li> <a class="side-rail-link" href="/guestbook"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:message-3-fill">   <symbol id="ai:ri:message-3-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M2 8.994A5.99 5.99 0 0 1 8 3h8c3.313 0 6 2.695 6 5.994V21H8c-3.313 0-6-2.695-6-5.994zM14 11v2h2v-2zm-6 0v2h2v-2z"/></symbol><use href="#ai:ri:message-3-fill"></use>  </svg> 留言板 </a> </li><li> <a class="side-rail-link" href="/friends"> <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:links-line">   <symbol id="ai:ri:links-line" viewBox="0 0 24 24"><path fill="currentColor" d="m13.06 8.111l1.415 1.414a7 7 0 0 1 0 9.9l-.354.353a7 7 0 1 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415zm6.718 6.01l-1.414-1.414a5 5 0 0 0-7.071-7.07l-.354.353a5 5 0 0 0 0 7.07l1.415 1.415l-1.415 1.414l-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 1 1 9.9 9.9"/></symbol><use href="#ai:ri:links-line"></use>  </svg> 友链 </a> </li><li> <a class="side-rail-link" href="/about"> <svg width="1em" height="1em" aria-hidden="true" data-icon="fa6-regular:circle-user">   <symbol id="ai:fa6-regular:circle-user" viewBox="0 0 512 512"><path fill="currentColor" d="M406.5 399.6c-19.1-46.7-65-79.6-118.5-79.6h-64c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256c0-114.9 93.1-208 208-208s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6m-40.1 32.7c-32 20.1-69.8 31.7-110.4 31.7s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512a256 256 0 1 0 0-512a256 256 0 1 0 0 512m0-272a40 40 0 1 1 0-80a40 40 0 1 1 0 80m-88-40a88 88 0 1 0 176 0a88 88 0 1 0-176 0"/></symbol><use href="#ai:fa6-regular:circle-user"></use>  </svg> 关于 </a> </li> </ul> <div class="side-rail-foot"> <!-- TODO: use CSS squircle corner-shape replace the rounded-xl border-radius with a squircle corner-shape (https://www.squircle.style/) --> <div class="mt-2 grid grid-cols-3 gap-2" data-astro-cid-qizw26vg> <div data-astro-cid-qizw26vg> <a class="social-link flex-center group relative overflow-hidden rounded-xl px-1.5 py-1 transition-all duration-300 group-hover:scale-105" style="--link-color: #f5f5f5" data-platform="xiaohongshu" href="https://www.xiaohongshu.com/user/profile/49270833781" title="小红书" data-tooltip-interactive="false" data-tooltip-placement="top" aria-label="小红书" target="_blank" rel="noopener noreferrer" data-astro-cid-qizw26vg> <svg width="1em" height="1em" class="inline-block size-6" data-astro-cid-qizw26vg="true" data-icon="ri:book-3-fill">   <symbol id="ai:ri:book-3-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M21 4H7a2 2 0 1 0 0 4h14v13a1 1 0 0 1-1 1H7a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h13a1 1 0 0 1 1 1zm-1 3H7a1 1 0 0 1 0-2h13z"/></symbol><use href="#ai:ri:book-3-fill"></use>  </svg> <span class="absolute inset-0 -z-10 -translate-x-full translate-y-full rounded-xl transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" data-astro-cid-qizw26vg></span> </a> </div><div data-astro-cid-qizw26vg> <a class="social-link flex-center group relative overflow-hidden rounded-xl px-1.5 py-1 transition-all duration-300 group-hover:scale-105" style="--link-color: #f5f5f5" data-platform="x_sasa" href="https://x.com/le_tai81777" title="X" data-tooltip-interactive="false" data-tooltip-placement="top" aria-label="X" target="_blank" rel="noopener noreferrer" data-astro-cid-qizw26vg> <svg width="1em" height="1em" class="inline-block size-6" data-astro-cid-qizw26vg="true" data-icon="ri:twitter-x-fill">   <symbol id="ai:ri:twitter-x-fill" viewBox="0 0 24 24"><path fill="currentColor" d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/></symbol><use href="#ai:ri:twitter-x-fill"></use>  </svg> <span class="absolute inset-0 -z-10 -translate-x-full translate-y-full rounded-xl transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" data-astro-cid-qizw26vg></span> </a> </div> </div> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var l=(n,t)=>{let i=async()=>{await(await n())()},e=typeof t.value=="object"?t.value:void 0,s={timeout:e==null?void 0:e.timeout};"requestIdleCallback"in window?window.requestIdleCallback(i,s):setTimeout(i,s.timeout||200)};(self.Astro||(self.Astro={})).idle=l;window.dispatchEvent(new Event("astro:idle"));})();</script><script>(()=>{var g=Object.defineProperty;var w=(a,s,c)=>s in a?g(a,s,{enumerable:!0,configurable:!0,writable:!0,value:c}):a[s]=c;var l=(a,s,c)=>w(a,typeof s!="symbol"?s+"":s,c);var E=new Set(["__proto__","constructor","prototype"]);{let a={0:t=>y(t),1:t=>c(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(c(t)),5:t=>new Set(c(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>Number.POSITIVE_INFINITY*t},s=t=>{let[p,e]=t;return p in a?a[p](e):void 0},c=t=>t.map(s),y=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([p,e])=>[p,s(e)]));class f extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),n={},d=this.querySelectorAll("template[data-astro-template]");for(let o of d){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of r){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[o.getAttribute("name")||"default"]=o.innerHTML)}let u;try{u=this.hasAttribute("props")?y(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(i+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let h;await this.hydrator(this)(this.Component,u,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),r.disconnect(),this.childrenConnectedCallback()},r=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});r.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}getRetryImportUrl(e){let r=new URL(e,document.baseURI);return r.searchParams.set("astro-retry",Date.now().toString()),r.toString()}async importWithRetry(e){try{return await import(e)}catch(r){return await new Promise(n=>setTimeout(n,1e3)),import(this.getRetryImportUrl(e))}}handleHydrationError(e){let r=this.getAttribute("component-url"),n=new CustomEvent("astro:hydration-error",{cancelable:!0,bubbles:!0,composed:!0,detail:{error:e,componentUrl:r}});this.dispatchEvent(n)&&console.error(`[astro-island] Error hydrating ${r}`,e)}async start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}try{await Astro[r](async()=>{let n=this.getAttribute("renderer-url");try{let[d,{default:u}]=await Promise.all([this.importWithRetry(this.getAttribute("component-url")),n?this.importWithRetry(n):Promise.resolve({default:()=>()=>{}})]),h=this.getAttribute("component-export")||"default";if(h.includes(".")){this.Component=d;for(let m of h.split(".")){if(E.has(m)||!this.Component||typeof this.Component!="object"&&typeof this.Component!="function"||!Object.hasOwn(this.Component,m))throw new Error(`Invalid component export path: ${h}`);this.Component=this.Component[m]}}else{if(E.has(h))throw new Error(`Invalid component export path: ${h}`);this.Component=d[h]}return this.hydrator=u,this.hydrate}catch(d){return this.handleHydrationError(d),()=>{}}},e,this)}catch(n){this.handleHydrationError(n)}}attributeChangedCallback(){this.hydrate()}}l(f,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",f)}})();</script><astro-island uid="Z1BYNjs" prefix="r14" component-url="/_astro/SideRailControls.NfZmZhtR.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{&quot;locale&quot;:[0,&quot;zh&quot;]}" ssr client="idle" opts="{&quot;name&quot;:&quot;SideRailControls&quot;,&quot;value&quot;:true}" await-children><div class="flex items-center justify-between gap-3 px-1"><button type="button" class="cursor-pointer transition duration-300 hover:scale-125" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8"><title>Search</title><path d="M18.03 16.62 22.31 20.9 20.9 22.31 16.62 18.03A8.96 8.96 0 0 1 11 20a9 9 0 1 1 9-9 8.96 8.96 0 0 1-1.97 5.62Zm-2.01-.75A7 7 0 1 0 11 18a6.98 6.98 0 0 0 4.87-1.98l.15-.15Z"></path></svg></button><button type="button" class="cursor-pointer transition duration-300 hover:scale-110" aria-label="Language: 中文" aria-haspopup="true" aria-expanded="false"><span></span></button><button class="theme-toggle scale-80 cursor-pointer transition duration-300 hover:scale-90 " aria-label="toggle theme" type="button"><label class="toggle block cursor-pointer" aria-label="toggle theme"><input type="checkbox" class="hidden"/><div class="toggle-indicator"></div></label></button></div><!--astro:end--></astro-island> </div> </nav> </div> <div data-astro-transition-scope="astro-cykaeyu2-3" id="site-header" class="shadow-text fixed tablet:backdrop-blur inset-x-0 top-0 z-30 gap-4 py-2.5 text-white select-none tablet:py-2 tablet:pl-3 tablet:pr-0 overflow-visible"> <div class="mx-auto flex items-center justify-between tablet:w-full px-6 tablet:pl-10 tablet:pr-3 max-w-7xl"> <!-- Desktop: Always show logo --> <a data-astro-transition-persist="page-header-avatar-zh" class="tablet:hidden -my-4 mr-4 flex cursor-pointer items-center justify-center gap-1 whitespace-nowrap" href="/" target="_self" title="撒撒的糖盒" aria-label="撒撒的糖盒"> <p class="logo-text">撒撒的糖盒</p> </a> <!-- Mobile: MobilePostHeader (shows heading on post pages, logo otherwise) --> <div class="tablet:flex tablet:grow hidden items-center justify-center"> <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><astro-island uid="2saaCr" component-url="/_astro/index.CCW32kc6.js" component-export="MobilePostHeader" renderer-url="/_astro/client.CcKcE1OL.js" props="{&quot;isPostPage&quot;:[0,false],&quot;enableNumbering&quot;:[0,true],&quot;logoElement&quot;:[0,&quot;text&quot;],&quot;logoText&quot;:[0,&quot;撒撒的糖盒&quot;],&quot;logoSrc&quot;:[0,&quot;/_astro/logo.OhVfzb_E.svg&quot;],&quot;logoHref&quot;:[0,&quot;/&quot;]}" ssr client="only" opts="{&quot;name&quot;:&quot;MobilePostHeader&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> </div> <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><astro-island uid="hd85W" prefix="r7" component-url="/_astro/Navigator.DAqCcAvF.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{&quot;currentPath&quot;:[0,&quot;/&quot;],&quot;locale&quot;:[0,&quot;zh&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;Navigator&quot;,&quot;value&quot;:true}" await-children><div class="flex grow tablet:grow-0 items-center"><div class="flex tablet:hidden grow items-center"><a href="/" aria-label="首页" class="relative flex items-center px-3 py-2 text-base tracking-wider after:absolute after:bottom-1 after:left-1/2 after:block after:h-0.5 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-9/12 after:w-9/12"><span></span>首页</a><button type="button" class="inline-flex h-10 items-center px-4 py-2 text-base tracking-wider relative after:absolute after:bottom-1 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-white after:transition-all after:duration-300 after:content-[&quot;&quot;]" aria-expanded="false" aria-haspopup="true" aria-label="文章菜单"><span></span>文章<span></span></button><button type="button" class="inline-flex h-10 items-center px-4 py-2 text-base tracking-wider relative after:absolute after:bottom-1 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-white after:transition-all after:duration-300 after:content-[&quot;&quot;]" aria-expanded="false" aria-haspopup="true" aria-label="生活菜单"><span></span>生活<span></span></button><a href="/guestbook" aria-label="留言板" class="relative flex items-center px-3 py-2 text-base tracking-wider after:absolute after:bottom-1 after:left-1/2 after:block after:h-0.5 after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-9/12"><span></span>留言板</a><a href="/friends" aria-label="友链" class="relative flex items-center px-3 py-2 text-base tracking-wider after:absolute after:bottom-1 after:left-1/2 after:block after:h-0.5 after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-9/12"><span></span>友链</a><a href="/about" aria-label="关于" class="relative flex items-center px-3 py-2 text-base tracking-wider after:absolute after:bottom-1 after:left-1/2 after:block after:h-0.5 after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-9/12"><span></span>关于</a></div><div class="ml-auto flex items-center gap-2"><button type="button" class="cursor-pointer transition duration-300 hover:scale-125" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8"><title>Search</title><path d="M18.03 16.62 22.31 20.9 20.9 22.31 16.62 18.03A8.96 8.96 0 0 1 11 20a9 9 0 1 1 9-9 8.96 8.96 0 0 1-1.97 5.62Zm-2.01-.75A7 7 0 1 0 11 18a6.98 6.98 0 0 0 4.87-1.98l.15-.15Z"></path></svg></button><div class="tablet:hidden flex-center"><button type="button" class="cursor-pointer transition duration-300 hover:scale-110" aria-label="Language: 中文" aria-haspopup="true" aria-expanded="false"><span></span></button></div><button class="theme-toggle scale-80 cursor-pointer transition duration-300 hover:scale-90 " aria-label="toggle theme" type="button"><label class="toggle block cursor-pointer" aria-label="toggle theme"><input type="checkbox" class="hidden"/><div class="toggle-indicator"></div></label></button></div></div><!--astro:end--></astro-island> </div>   </div> <!-- 移动端菜单按钮 --> <astro-island uid="1jT8Vb" component-url="/_astro/MenuIcon.Bwsos34_.js" component-export="MenuIcon" renderer-url="/_astro/client.CcKcE1OL.js" props="{&quot;className&quot;:[0,&quot;tablet:flex fixed top-0 left-3 z-52 hidden h-14 transition-transform&quot;],&quot;id&quot;:[0,&quot;mobile-menu-container&quot;]}" ssr client="only" opts="{&quot;name&quot;:&quot;MenuIcon&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> <main class="relative flex grow flex-col gap-4">   <section class="flight" aria-labelledby="flight-title" style="--stops:5" data-flight data-locale="zh" data-pagefind-ignore="all"> <div class="flight-stage" data-flight-stage> <canvas class="flight-canvas" data-flight-canvas aria-hidden="true"></canvas> <div class="flight-intro" data-flight-fade="0.35"> <p class="flight-moon" data-flight-moon>今晚</p> <h1 id="flight-title" class="font-chill-round">撒撒的糖盒</h1> <p class="flight-greeting" data-flight-greeting>AI 产品经理 · 大模型与 Agent 落地</p> <p class="flight-lead"> 四个星系，一个黑洞。这里放我的产品笔记、读过的论文、拍下的照片，还有一些没想明白的问题。 </p> </div> <div class="flight-stars">  <a class="flight-star flight-orbit" href="https://www.xiaohongshu.com/user/profile/49270833781" target="_blank" rel="noopener noreferrer" style="--star:#ffffff;--delay:0s" data-flight-star data-galaxy="4" data-u="0" data-v="0" data-orbit="1.5708" data-title="小红书" data-date="xiaohongshu.com" data-kind="链接"> <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" data-icon="ri:book-3-fill">   <use href="#ai:ri:book-3-fill"></use>  </svg> <span class="flight-orbit-name">小红书</span> </a><a class="flight-star flight-orbit" href="https://x.com/le_tai81777" target="_blank" rel="noopener noreferrer" style="--star:#ffffff;--delay:0.41s" data-flight-star data-galaxy="4" data-u="0" data-v="0" data-orbit="4.7124" data-title="X" data-date="x.com" data-kind="链接"> <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" data-icon="ri:twitter-x-fill">   <use href="#ai:ri:twitter-x-fill"></use>  </svg> <span class="flight-orbit-name">X</span> </a> </div> <article id="flight-story-0" class="flight-label" data-flight-label data-ask="轻点星系，听它说说自己" style="--accent:#f5f5f5"> <p class="flight-kicker"> <span class="flight-number">01</span> 博客 <span class="flight-count">0 颗星</span> </p> <h2> <a class="flight-name font-chill-round" href="/blogs" data-warp data-warp-color="#f5f5f5" data-flight-enter="0" aria-label="博客：涡状星系"> 涡状星系 <svg width="1em" height="1em" aria-hidden="true" data-icon="ri:arrow-right-line">   <symbol id="ai:ri:arrow-right-line" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z"/></symbol><use href="#ai:ri:arrow-right-line"></use>  </svg> </a> </h2> <p class="flight-type">M51 · 宏象旋涡星系 · 伴星系 NGC 5195</p> <p class="flight-quote">把复杂留给系统，把简单留给用户。</p> <p class="flight-note">旋臂一圈圈绕回中心。产品也一样：所有路径最后都要回到用户的问题。</p> <p class="flight-info" role="status"> <span class="flight-info-title">这里还没有星星。</span> </p> </article><article id="flight-story-1" class="flight-label" data-flight-label data-ask="轻点星系，听它说说自己" style="--accent:#d4d4d4"> <p class="flight-kicker"> <span class="flight-number">02</span> 论文 <span class="flight-count">0 颗星</span> </p> <h2> <a class="flight-name font-chill-round" href="/papers" data-warp data-warp-color="#d4d4d4" data-flight-enter="1" aria-label="论文：NGC 1300"> NGC 1300 <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" data-icon="ri:arrow-right-line">   <use href="#ai:ri:arrow-right-line"></use>  </svg> </a> </h2> <p class="flight-type">棒旋星系 · 波江座</p> <p class="flight-quote">论文回答边界，产品回答取舍。</p> <p class="flight-note">一根笔直的棒穿过核心，旋臂从两端展开。先有结构，再谈增长。</p> <p class="flight-info" role="status"> <span class="flight-info-title">这里还没有星星。</span> </p> </article><article id="flight-story-2" class="flight-label" data-flight-label data-ask="轻点星系，听它说说自己" style="--accent:#a3a3a3"> <p class="flight-kicker"> <span class="flight-number">03</span> 照片墙 <span class="flight-count">0 颗星</span> </p> <h2> <a class="flight-name font-chill-round" href="/gallery" data-warp data-warp-color="#a3a3a3" data-flight-enter="2" aria-label="照片墙：霍格天体"> 霍格天体 <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" data-icon="ri:arrow-right-line">   <use href="#ai:ri:arrow-right-line"></use>  </svg> </a> </h2> <p class="flight-type">环状星系 · 巨蛇座</p> <p class="flight-quote">留白不是缺失，是设计。</p> <p class="flight-note">核心与光环之间几乎空无一物。敢删，重点才留得下来。</p> <p class="flight-info" role="status"> <span class="flight-info-title">这里还没有星星。</span> </p> </article><article id="flight-story-3" class="flight-label" data-flight-label data-ask="轻点星系，听它说说自己" style="--accent:#e5e5e5"> <p class="flight-kicker"> <span class="flight-number">04</span> 日常 <span class="flight-count">0 颗星</span> </p> <h2> <a class="flight-name font-chill-round" href="/moments" data-warp data-warp-color="#e5e5e5" data-flight-enter="3" aria-label="日常：小麦哲伦云"> 小麦哲伦云 <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" data-icon="ri:arrow-right-line">   <use href="#ai:ri:arrow-right-line"></use>  </svg> </a> </h2> <p class="flight-type">小麦哲伦云 · 不规则矮星系 · 杜鹃座</p> <p class="flight-quote">长期主义不是口号，是每天多做一点。</p> <p class="flight-note">没有固定形状，却一直待在银河旁边。日常不完美，但持续。</p> <p class="flight-info" role="status"> <span class="flight-info-title">这里还没有星星。</span> </p> </article> <article id="flight-story-4" class="flight-label flight-about" data-flight-label data-ask="点开黑洞，看看我是谁" style="--accent:#ffffff"> <p class="flight-kicker"> <span class="flight-number">05</span> 关于我 <span class="flight-count">2 条航线在绕行</span> </p> <h2> <a class="flight-name font-chill-round" href="/about" data-warp data-warp-color="#ffffff" data-flight-enter="4" aria-label="关于我：人马座 A*"> 人马座 A* <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" data-icon="ri:arrow-right-line">   <use href="#ai:ri:arrow-right-line"></use>  </svg> </a> </h2> <p class="flight-type">银河系中心的超大质量黑洞 · 视界之内，连光也无法离开</p> <div class="flight-me"> <img src="/img/avatar-sasa.jpg" alt="" width="56" height="56" loading="lazy" decoding="async"> <div> <p class="flight-me-name">撒撒的糖盒</p> <p class="flight-me-text">我是撒撒的糖盒，AI 产品经理。做过大模型应用，也做过 Agent 从 demo 到上线。习惯先把问题拆到不能再拆，再决定做不做。</p><p class="flight-me-text">比起参数规模，我更关心模型能不能变成用户愿意反复使用的产品。这里记录我的判断、踩过的坑，和一些还没有答案的问题。</p> </div> </div> <p class="flight-quote">把问题想清楚，比把话说漂亮更重要。</p> <p class="flight-note">所有光都在这里弯折、回头。我的联系方式在周围绕行，选一个。</p> </article> <nav class="flight-nav" aria-label="四个星系和一个黑洞"> <button type="button" data-flight-goto="0" aria-controls="flight-story-0" aria-expanded="false" style="--accent:#f5f5f5"> <span class="flight-nav-name">涡状星系</span> <span class="flight-nav-dot" aria-hidden="true"></span> </button><button type="button" data-flight-goto="1" aria-controls="flight-story-1" aria-expanded="false" style="--accent:#d4d4d4"> <span class="flight-nav-name">NGC 1300</span> <span class="flight-nav-dot" aria-hidden="true"></span> </button><button type="button" data-flight-goto="2" aria-controls="flight-story-2" aria-expanded="false" style="--accent:#a3a3a3"> <span class="flight-nav-name">霍格天体</span> <span class="flight-nav-dot" aria-hidden="true"></span> </button><button type="button" data-flight-goto="3" aria-controls="flight-story-3" aria-expanded="false" style="--accent:#e5e5e5"> <span class="flight-nav-name">小麦哲伦云</span> <span class="flight-nav-dot" aria-hidden="true"></span> </button> <button type="button" data-flight-goto="4" aria-controls="flight-story-4" aria-expanded="false" style="--accent:#ffffff"> <span class="flight-nav-name">人马座 A*</span> <span class="flight-nav-dot"></span> </button> </nav> <p class="flight-ask" data-flight-ask aria-hidden="true"> <span class="flight-ask-dot"></span> <span data-flight-ask-text>轻点星系，听它说说自己</span> </p> <p class="flight-hint" data-flight-fade="0.12" aria-hidden="true"> <span class="flight-mouse"></span> 滚动，穿过星系 </p> </div> </section> <script type="module" src="/_astro/GalaxyFlight.astro_astro_type_script_index_0_lang.D2BQcD6-.js"></script>   </main>  <astro-island uid="TWS5R" component-url="/_astro/FloatingGroup.DGUh9QnH.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;FloatingGroup&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> <astro-island uid="Z17sJHE" prefix="r8" component-url="/_astro/SettingsPanel.DI43EDiw.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="idle" opts="{&quot;name&quot;:&quot;SettingsPanel&quot;,&quot;value&quot;:true}"></astro-island> <!-- 遮罩层 --> <div id="drawer-overlay" class="fixed inset-0 z-40 hidden bg-black/50" role="presentation" aria-hidden="true"></div> <!-- 移动端抽屉导航 --> <div id="mobile-drawer" class="bg-gradient-start tablet:flex fixed inset-y-0 left-0 z-50 hidden h-screen w-[70vw] min-w-64 -translate-x-full transform px-4 pt-3 shadow-lg backdrop-blur-sm transition-transform duration-300 md:px-0" role="dialog" aria-label="导航菜单" aria-modal="true"> <div class="flex h-full w-full flex-col overflow-auto"> <div class="flex items-center"> <button id="close-drawer" aria-label="关闭菜单" class="invisible"> <svg width="1em" height="1em" class="h-6 w-6" data-icon="ri:close-line">   <symbol id="ai:ri:close-line" viewBox="0 0 24 24"><path fill="currentColor" d="m12 10.587l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.949 4.95l-1.414-1.415l4.95-4.95l-4.95-4.95L7.05 5.638z"/></symbol><use href="#ai:ri:close-line"></use>  </svg> </button> <details class="language-switcher group relative ml-auto mr-4"> <summary class="flex cursor-pointer list-none items-center gap-1.5 rounded-lg px-2.5 py-1 text-sm text-muted-foreground transition-colors hover:bg-foreground/10 hover:text-foreground [&amp;::-webkit-details-marker]:hidden" aria-label="语言"> <svg width="1em" height="1em" class="size-4" data-icon="ri:translate">   <symbol id="ai:ri:translate" viewBox="0 0 24 24"><path fill="currentColor" d="M5 15v2a2 2 0 0 0 1.85 1.994L7 19h3v2H7a4 4 0 0 1-4-4v-2zm13-5l4.4 11h-2.155l-1.201-3h-4.09l-1.199 3h-2.154L16 10zm-1 2.885L15.753 16h2.492zM8 2v2h4v7H8v3H6v-3H2V4h4V2zm9 1a4 4 0 0 1 4 4v2h-2V7a2 2 0 0 0-2-2h-3V3zM6 6H4v3h2zm4 0H8v3h2z"/></symbol><use href="#ai:ri:translate"></use>  </svg> <span>中文</span> <svg width="1em" height="1em" class="size-4 transition-transform duration-200 group-open:rotate-180" data-icon="ri:arrow-down-s-line">   <symbol id="ai:ri:arrow-down-s-line" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z"/></symbol><use href="#ai:ri:arrow-down-s-line"></use>  </svg> </summary> <div class="absolute right-0 top-full z-10 mt-1 flex min-w-28 flex-col overflow-hidden rounded-lg bg-background/80 shadow-lg backdrop-blur-sm dark:bg-black/40"> <a href="/" class="px-4 py-2 text-sm transition-colors bg-gradient-shoka-button font-medium text-white" aria-current="true"> 中文 </a><a href="/en/" class="px-4 py-2 text-sm transition-colors text-muted-foreground hover:bg-foreground/10 hover:text-foreground"> English </a> </div> </details> </div> <div data-astro-transition-scope="astro-bddlvhab-4" class="page-home-sider shadow-home-sider sticky top-0 tablet:overscroll-none self-start max-w-64 flex-col items-stretch overflow-auto h-screen scroll-gutter-stable tablet:flex tablet:mt-0 mt-4 hidden w-full min-w-full p-0" data-astro-cid-lo6vnqzn>  <script type="module">var e=null;function t(){document.querySelectorAll(`[data-home-info-container]`).forEach(e=>{e.querySelectorAll(`[data-collapse-trigger]`).forEach(t=>{let n=t.getAttribute(`data-collapse-trigger`);if(!n||t.hasAttribute(`data-initialized`))return;t.setAttribute(`data-initialized`,`true`);let r=e.querySelector(`[data-collapse-content="${n}"]`),i=t.querySelector(`[data-collapse-icon="${n}"]`);!r||!i||t.addEventListener(`click`,e=>{e.preventDefault(),e.stopPropagation(),t.getAttribute(`aria-expanded`)===`true`?(r.classList.add(`collapse-hidden`),i.style.transform=`rotate(0deg)`,t.setAttribute(`aria-expanded`,`false`)):(r.classList.remove(`collapse-hidden`),i.style.transform=`rotate(180deg)`,t.setAttribute(`aria-expanded`,`true`))})})})}function n(){e&&=(e.disconnect(),null)}function r(){n(),e=new MutationObserver(e=>{e.forEach(e=>{e.addedNodes.length&&setTimeout(t,100)})}),e.observe(document.body,{childList:!0,subtree:!0})}document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,()=>{t(),r()}):(t(),r()),document.addEventListener(`astro:page-load`,()=>{t(),r()}),document.addEventListener(`astro:before-swap`,n);</script><sider-content class="vertical-scrollbar flex-1 overflow-x-hidden overflow-y-auto" data-type="home" data-default-type="info" data-astro-cid-lo6vnqzn="true"> <div slot="info" class="sider-slot" data-slot-type="info" data-astro-cid-lo6vnqzn> <div class="flex flex-col items-center md:py-2 pt-18 md:pt-0" data-home-info-container="home-info-t114rxdd2" data-astro-cid-7br6y6lf> <div class="relative h-40 w-40 rounded-full" data-astro-cid-7br6y6lf> <img class="shadow-card-darker hover:animate-shake h-full w-full rounded-full transition" src="/img/avatar-sasa.jpg" alt="撒撒的糖盒 avatar" loading="eager" fetchpriority="high" data-astro-cid-7br6y6lf>  </div> <p class="mt-2" data-astro-cid-7br6y6lf>撒撒的糖盒</p> <p class="text-muted-foreground mt-3 text-center" data-astro-cid-7br6y6lf>撒撒的糖盒，AI 产品经理。记录大模型、Agent 与产品化的实践和判断。</p> <!-- TODO: use CSS squircle corner-shape replace the rounded-xl border-radius with a squircle corner-shape (https://www.squircle.style/) --> <div class="mt-2 grid grid-cols-3 gap-2" data-astro-cid-qizw26vg> <div data-astro-cid-qizw26vg> <a class="social-link flex-center group relative overflow-hidden rounded-xl px-1.5 py-1 transition-all duration-300 group-hover:scale-105" style="--link-color: #f5f5f5" data-platform="xiaohongshu" href="https://www.xiaohongshu.com/user/profile/49270833781" title="小红书" data-tooltip-interactive="false" data-tooltip-placement="top" aria-label="小红书" target="_blank" rel="noopener noreferrer" data-astro-cid-qizw26vg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="inline-block size-6" data-astro-cid-qizw26vg="true" data-icon="ri:book-3-fill">   <use href="#ai:ri:book-3-fill"></use>  </svg> <span class="absolute inset-0 -z-10 -translate-x-full translate-y-full rounded-xl transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" data-astro-cid-qizw26vg></span> </a> </div><div data-astro-cid-qizw26vg> <a class="social-link flex-center group relative overflow-hidden rounded-xl px-1.5 py-1 transition-all duration-300 group-hover:scale-105" style="--link-color: #f5f5f5" data-platform="x_sasa" href="https://x.com/le_tai81777" title="X" data-tooltip-interactive="false" data-tooltip-placement="top" aria-label="X" target="_blank" rel="noopener noreferrer" data-astro-cid-qizw26vg> <svg width="1em" height="1em" viewBox="0 0 24 24" class="inline-block size-6" data-astro-cid-qizw26vg="true" data-icon="ri:twitter-x-fill">   <use href="#ai:ri:twitter-x-fill"></use>  </svg> <span class="absolute inset-0 -z-10 -translate-x-full translate-y-full rounded-xl transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" data-astro-cid-qizw26vg></span> </a> </div> </div> <div class="text-muted-foreground mt-3 flex justify-center text-center text-sm/4 whitespace-nowrap select-none dark:text-white/80" data-astro-cid-7br6y6lf> <a href="/posts" class="hover:text-blue flex cursor-pointer flex-col gap-2 p-1 transition" data-astro-cid-7br6y6lf> <span class="text-lg/5 font-bold" data-astro-cid-7br6y6lf>0</span> 文章 </a> <div class="bg-muted-foreground mx-3 w-px" data-astro-cid-7br6y6lf></div> <a href="/papers" aria-label="论文" class="hover:text-blue" data-astro-cid-7br6y6lf> <p class="flex cursor-pointer flex-col gap-2 p-1 transition" data-astro-cid-7br6y6lf> <span class="text-lg/5 font-bold" data-astro-cid-7br6y6lf>0</span> 论文 </p> </a> <div class="bg-muted-foreground mx-3 w-px" data-astro-cid-7br6y6lf></div> <a href="/blogs" class="hover:text-blue flex cursor-pointer flex-col gap-2 p-1 transition" data-astro-cid-7br6y6lf> <span class="text-lg/5 font-bold" data-astro-cid-7br6y6lf>0</span> 博客 </a> </div> <div class="mt-6 flex w-full flex-col items-center gap-2.5" data-astro-cid-7br6y6lf> <a href="/" aria-label="首页" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button text-primary-foreground px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider opacity-75 transition-all duration-300 hover:opacity-100"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:home-heart-fill">   <use href="#ai:ri:home-heart-fill"></use>  </svg>首页 </a><div class="bg-foreground/10 flex w-40 flex-col rounded-xl opacity-75 transition-all duration-300 hover:opacity-100" data-collapsible data-astro-cid-7br6y6lf> <button class="flex-center hover:bg-foreground/5 h-12 w-full cursor-pointer rounded-xl transition-colors" data-collapse-trigger="home-info-t114rxdd2-collapse-1" aria-expanded="false" aria-label="文章菜单" type="button" data-astro-cid-7br6y6lf> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:quill-pen-ai-fill">   <use href="#ai:ri:quill-pen-ai-fill"></use>  </svg> 文章 <svg width="1em" height="1em" viewBox="0 0 24 24" class="ml-2 size-5 transition-transform duration-300" data-collapse-icon="home-info-t114rxdd2-collapse-1" data-astro-cid-7br6y6lf="true" data-icon="ri:arrow-down-s-line">   <use href="#ai:ri:arrow-down-s-line"></use>  </svg> </button> <div class="collapse-hidden" data-collapse-content="home-info-t114rxdd2-collapse-1" data-astro-cid-7br6y6lf> <div class="flex flex-col items-center" data-astro-cid-7br6y6lf> <a href="/posts" aria-label="全部文章" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:article-fill">   <use href="#ai:ri:article-fill"></use>  </svg>全部文章 </a><a href="/papers" aria-label="论文" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:book-open-fill">   <use href="#ai:ri:book-open-fill"></use>  </svg>论文 </a><a href="/blogs" aria-label="博客" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:global-line">   <use href="#ai:ri:global-line"></use>  </svg>博客 </a> </div> </div> </div><div class="bg-foreground/10 flex w-40 flex-col rounded-xl opacity-75 transition-all duration-300 hover:opacity-100" data-collapsible data-astro-cid-7br6y6lf> <button class="flex-center hover:bg-foreground/5 h-12 w-full cursor-pointer rounded-xl transition-colors" data-collapse-trigger="home-info-t114rxdd2-collapse-2" aria-expanded="false" aria-label="生活菜单" type="button" data-astro-cid-7br6y6lf> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:sparkling-fill">   <use href="#ai:ri:sparkling-fill"></use>  </svg> 生活 <svg width="1em" height="1em" viewBox="0 0 24 24" class="ml-2 size-5 transition-transform duration-300" data-collapse-icon="home-info-t114rxdd2-collapse-2" data-astro-cid-7br6y6lf="true" data-icon="ri:arrow-down-s-line">   <use href="#ai:ri:arrow-down-s-line"></use>  </svg> </button> <div class="collapse-hidden" data-collapse-content="home-info-t114rxdd2-collapse-2" data-astro-cid-7br6y6lf> <div class="flex flex-col items-center" data-astro-cid-7br6y6lf> <a href="/gallery" aria-label="照片墙" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:gallery-fill">   <use href="#ai:ri:gallery-fill"></use>  </svg>照片墙 </a><a href="/moments" aria-label="生活动态" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:chat-smile-3-fill">   <use href="#ai:ri:chat-smile-3-fill"></use>  </svg>生活动态 </a> </div> </div> </div><a href="/guestbook" aria-label="留言板" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider opacity-75 transition-all duration-300 hover:opacity-100 text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:message-3-fill">   <use href="#ai:ri:message-3-fill"></use>  </svg>留言板 </a><a href="/friends" aria-label="友链" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider opacity-75 transition-all duration-300 hover:opacity-100 text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 24 24" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="ri:links-line">   <use href="#ai:ri:links-line"></use>  </svg>友链 </a><a href="/about" aria-label="关于" data-astro-cid-7br6y6lf="true" class="inline-flex items-center justify-center whitespace-nowrap ring-offset-background focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-shoka-button px-4 py-2 shoka-button-shadow h-12 w-40 rounded-xl text-base tracking-wider opacity-75 transition-all duration-300 hover:opacity-100 text-muted-foreground/80 hover:bg-muted-foreground/10 bg-none shadow-none hover:shadow-none"> <svg width="1em" height="1em" viewBox="0 0 512 512" class="mr-1.5" data-astro-cid-7br6y6lf="true" data-icon="fa6-regular:circle-user">   <use href="#ai:fa6-regular:circle-user"></use>  </svg>关于 </a> </div> </div>  </div> <div slot="directory" class="sider-slot overflow-hidden h-full" data-slot-type="directory" data-astro-cid-lo6vnqzn>  </div> </sider-content> <!-- 内联脚本：在 DOM 解析后立即隐藏不需要的内容，避免闪烁 --> <script data-astro-rerun>
+    (function () {
+      const container = document.querySelector('sider-content');
+      if (!container) return;
+
+      const defaultType = container.getAttribute('data-default-type') || 'info';
+      const slots = container.querySelectorAll('.sider-slot');
+
+      slots.forEach((slot) => {
+        const slotType = slot.getAttribute('data-slot-type');
+        if (slotType !== defaultType) {
+          slot.classList.add('hidden');
+        }
+      });
+    })();
+  </script><astro-island uid="ww1v6" component-url="/_astro/ScrollProgress.C-LxyPoq.js" component-export="ScrollProgress" renderer-url="/_astro/client.CcKcE1OL.js" props="{&quot;className&quot;:[0,&quot;mt-auto w-full rounded-full pt-4&quot;],&quot;data-astro-cid-lo6vnqzn&quot;:[0,true]}" ssr client="only" opts="{&quot;name&quot;:&quot;ScrollProgress&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> </div> <script type="module" src="/_astro/HomeSider.astro_astro_type_script_index_0_lang.VMTdKtzj.js"></script> </div> </div> <script type="module" src="/_astro/MobileDrawer.astro_astro_type_script_index_0_lang.DR0HF3ca.js"></script> <astro-island uid="1y4qW3" prefix="r9" component-url="/_astro/SearchDialog.DrLkYxTZ.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="idle" opts="{&quot;name&quot;:&quot;SearchDialog&quot;,&quot;value&quot;:true}"></astro-island> <!-- Search Component - will be portal'd into dialog --> <div id="search-component-portal" data-astro-cid-sh5tgklq> <div id="search-for-dialog" data-astro-cid-sh5tgklq> <pagefind-config lang="zh-CN" bundle-path="/pagefind/"></pagefind-config> <script type="module" src="/_astro/PagefindConfig.astro_astro_type_script_index_0_lang.hMEz0n5-.js"></script> <pagefind-searchbox placeholder="请输入关键词搜索" hide-shortcut="true" show-keyboard-hints="false" class="pagefind-search"></pagefind-searchbox> </div> </div> <script type="module">function e(){let e=document.getElementById(`search-dialog-container`),t=document.getElementById(`search-component-portal`),n=document.getElementById(`search-for-dialog`);!e||!t||!n||e.contains(n)||e.appendChild(n)}function t(){let e=document.getElementById(`search-for-dialog`),t=document.getElementById(`search-component-portal`);!e||!t||t.contains(e)||t.appendChild(e)}function n(){requestAnimationFrame(()=>{e()})}function r(){t()}var i=!1;function a(){i||(i=!0,window.addEventListener(`search-dialog-open`,n),window.addEventListener(`search-dialog-close`,r))}function o(){i&&=(window.removeEventListener(`search-dialog-open`,n),window.removeEventListener(`search-dialog-close`,r),!1)}document.readyState!==`loading`&&a(),document.addEventListener(`astro:page-load`,a),document.addEventListener(`astro:before-swap`,o);</script> <astro-island uid="ZEbEla" prefix="r10" component-url="/_astro/CodeBlockFullscreen.nFRCMxj5.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="idle" opts="{&quot;name&quot;:&quot;CodeBlockFullscreen&quot;,&quot;value&quot;:true}"></astro-island> <astro-island uid="1q62AM" prefix="r11" component-url="/_astro/DiagramFullscreen.DRq4tpUp.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="idle" opts="{&quot;name&quot;:&quot;DiagramFullscreen&quot;,&quot;value&quot;:true}"></astro-island> <astro-island uid="Z1gOVFG" prefix="r12" component-url="/_astro/ImageLightbox.CskaOAPo.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="idle" opts="{&quot;name&quot;:&quot;ImageLightbox&quot;,&quot;value&quot;:true}"></astro-island> <astro-island uid="ZlnknW" prefix="r13" component-url="/_astro/sonner.COwsjDuJ.js" component-export="Toaster" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="idle" opts="{&quot;name&quot;:&quot;Toaster&quot;,&quot;value&quot;:true}" await-children><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section><!--astro:end--></astro-island> <!-- React components for Toast and Popup --> <astro-island uid="2imtod" prefix="r17" component-url="/_astro/AnnouncementToaster.CCe9zZr1.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;AnnouncementToaster&quot;,&quot;value&quot;:true}"></astro-island> <astro-island uid="Z1fEjsH" prefix="r18" component-url="/_astro/AnnouncementListPopup.Da_H5cRe.js" component-export="default" renderer-url="/_astro/client.CcKcE1OL.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;AnnouncementListPopup&quot;,&quot;value&quot;:true}"></astro-island> <script type="module" src="/_astro/AnnouncementProvider.astro_astro_type_script_index_0_lang.49crVVy6.js"></script> <script type="module">var e=!1;function t(){return new Promise((t,n)=>{if(e||window.__CPEmbed){t();return}let r=document.createElement(`script`);r.src=`https://cpwebassets.codepen.io/assets/embed/ei.js`,r.async=!0,r.onload=()=>{e=!0,t()},r.onerror=n,document.head.appendChild(r)})}async function n(){if(document.querySelectorAll(`.codepen`).length!==0)try{await t(),window.__CPEmbed&&window.__CPEmbed()}catch(e){console.error(`[CodePen Embed] Failed to load CodePen embed script:`,e)}}document.readyState!==`loading`&&n(),document.addEventListener(`astro:page-load`,n);</script> <canvas data-astro-transition-persist="sasa-warp" id="sasa-warp" class="sasa-warp" aria-hidden="true" data-astro-cid-5ng47ahq></canvas> <script type="module" src="/_astro/WarpOverlay.astro_astro_type_script_index_0_lang.Bvo4bd7I.js"></script> </div> </body> </html>

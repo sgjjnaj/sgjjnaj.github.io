@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime.ByD28K84.js";import{r as t,t as n}from"./LanguageSwitcher.Cm95xdQL.js";import{SearchTrigger as r}from"./SearchDialog.DrLkYxTZ.js";var i=e();function a({locale:e}){return(0,i.jsxs)(`div`,{className:`flex items-center justify-between gap-3 px-1`,children:[(0,i.jsx)(r,{}),(0,i.jsx)(n,{locale:e}),(0,i.jsx)(t,{})]})}export{a as default};
